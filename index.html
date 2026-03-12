@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>802.11r Compatibility Issues Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>802.11r Fast Transition — Known Compatibility Issues</h1>
+      <p class="subtitle">
+        A community-maintained database of wireless chipsets and client devices with known issues
+        related to IEEE 802.11r (Fast BSS Transition / Fast Roaming). Grouped by chipset manufacturer.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="controls">
+      <div class="search-wrapper">
+        <span class="search-icon">&#128269;</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by chipset, device, manufacturer, or issue..."
+          autocomplete="off"
+        />
+        <button id="clearSearch" title="Clear search">&#x2715;</button>
+      </div>
+
+      <div class="filter-wrapper">
+        <label for="manufacturerFilter">Filter by Chipset Manufacturer:</label>
+        <select id="manufacturerFilter">
+          <option value="all">All Manufacturers</option>
+        </select>
+      </div>
+
+      <div class="stats-bar">
+        <span id="resultCount"></span>
+      </div>
+    </div>
+
+    <div id="tableContainer">
+      <!-- Grouped tables rendered by app.js -->
+    </div>
+
+    <div id="noResults" class="no-results hidden">
+      <p>No matching results found. Try a different search term.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Data sourced from public vendor advisories, community forums, and bug trackers.
+      This database is provided for informational purposes.
+      &nbsp;|&nbsp;
+      <a href="https://github.com/JimmyTaylor75/802.11r" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
